@@ -9,13 +9,13 @@ function changeState(state, action) {
   }
 }
 
-function render() {
-  document.body.textContent = state.count
-}
-
 function dispatch(action) {
   state = changeState(state, action)
-  render()
+  return state
+}
+
+function render() {
+  document.body.textContent = state.count
 }
 
 render()
